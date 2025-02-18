@@ -3,6 +3,11 @@ Calculates all-versus-all similarities of np.ndarrray (n x d) of embeddings. Cal
 
 *NOTE:* code assumes all embeddings are **L2-NORMALIZED**.
 
+<P align="center">
+<IMG SRC="assets/example.png" CLASS="center" ALT="illustration of Gini coefficient calculation for all-vs-all similarity scores for embeddings">
+</P>
+<P>
+
 ### Example
 
 ```python
