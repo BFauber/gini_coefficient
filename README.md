@@ -6,7 +6,7 @@ Calculates all-versus-all similarities of np.ndarrray (n x d) of embeddings. Cal
 ### Example
 
 ```python
-calc_gini_by_row(embeddings: np.ndarray, normalize: bool=True) -> np.ndarray:
+giniCoefficient(embeddings: np.ndarray, normalize: bool=True, memory_efficient: bool=True)
 ```
 
 **Input:**
@@ -14,6 +14,9 @@ calc_gini_by_row(embeddings: np.ndarray, normalize: bool=True) -> np.ndarray:
 **embeddings** : `np.ndarray` of n x d dimensions *NOTE:* code assumes all embeddings are **L2-NORMALIZED**
 
 Enabling the `normalize` feature results in `MinMax` scaling of outputs such that [0,1] for all Gini values.
+
+Enabling the `memory_efficient` feature results in memory-efficient, but potentially less time-efficient,
+calculation of the Gini coefficient for each element in the input array.
 
 **Output:**
 
