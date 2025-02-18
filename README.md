@@ -8,7 +8,7 @@ Calculates all-versus-all similarities of np.ndarrray (n x d) of embeddings. Cal
 
 *NOTE:* code assumes all embeddings are **L2-NORMALIZED**.
 
-### Example
+## Example
 
 ```python
 giniCoefficient(embeddings: np.ndarray, normalize: bool=True, memory_efficient: bool=True)
@@ -27,11 +27,25 @@ calculation of the Gini coefficient for each element in the input array.
 
 **array** : `np.ndarray` of n x 1 dimensions of the Gini coefficients of the input array
 
-##
-This is a `numpy` implementation of: ["Gini Coefficient as a Unified Metric for Evaluating Many-versus-Many Similarity in Vector Spaces"](https://arxiv.org/abs/2411.07983). If using more than 1,000 embeddings/vectors, it is recommended that this code should be implemented with [CuPy](https://cupy.dev/) or [PyTorch](https://pytorch.org/) for acceleration on GPUs. The similarity calculation is the slow step and this is calculation is greatly accelerated on GPU infrastructure (<1 sec for 1e10 elements on GPU vs. hours on CPU).
+## Background
+
+This is a `numpy` implementation of: ["Gini Coefficient as a Unified Metric for Evaluating Many-versus-Many Similarity in Vector Spaces"](https://arxiv.org/abs/2411.07983). If using more than 1,000 embeddings/vectors, it is recommended that this code should be implemented with [CuPy](https://cupy.dev/) or [PyTorch](https://pytorch.org/) for acceleration on GPUs. The similarity calculation is the slow step and this calculation is greatly accelerated on GPU infrastructure (<1 sec for 1e10 elements on GPU vs. hours on CPU).
 
 Dependencies include `numpy` and `scikit-learn`
 
 Code uses the bootstrap method for calculating a Gini coefficient, as described in:
 1) Dixon, P. M.; Weiner, J.; Mitchell-Olds, T.; Wooley, R. "Bootstrapping the Gini Coefficient of Inequality." *Ecology* **1987**, *68*, 1548-1551.
 2) Dixon, P. M.; Weiner, J.; Mitchell-Olds, T.; Wooley, R. "Errratum to Bootstrapping the Gini Coefficient of Inequality." *Ecology* **1988**, *69*, 1307.
+
+## Citing this Repo
+
+```
+@article{FauberGiniCoeff2024,
+  title={{Gini Coefficient as a Unified Metric for Evaluating Many-versus-Many Similarity in Vector Spaces}},
+  author={Ben Fauber},
+  journal={arXiv},
+  year={2024},
+  volume={abs/2411.07983},
+  url={https://arxiv.org/abs/2411.07983}
+}
+```
