@@ -1,12 +1,12 @@
 # gini_coefficient
 Calculates all-versus-all similarities of np.ndarrray (n x d) of embeddings. Calculation of Gini coefficients (output: n x 1 vector) from n x d array of L2-normalized embeddings for assessment of similarity across all n-elements. 
 
-*NOTE:* code assumes all embeddings are **L2-NORMALIZED**.
-
 <P align="center">
-<IMG SRC="assets/example.png" CLASS="center" ALT="illustration of Gini coefficient calculation for all-vs-all similarity scores for embeddings">
+<IMG SRC="assets/example.jpg" CLASS="center" ALT="illustration of Gini coefficient calculation for all-vs-all similarity scores for embeddings">
 </P>
 <P>
+
+*NOTE:* code assumes all embeddings are **L2-NORMALIZED**.
 
 ### Example
 
