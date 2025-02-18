@@ -28,7 +28,7 @@ calculation of the Gini coefficient for each element in the input array.
 **array** : `np.ndarray` of n x 1 dimensions of the Gini coefficients of the input array
 
 ##
-This is a `numpy` implementation of: ["Gini Coefficient as a Unified Metric for Evaluating Many-versus-Many Similarity in Vector Spaces"](https://arxiv.org/abs/2411.07983). If using more than 1,000 or 10,000 embeddings/vectors, it is recommended that this code should be implemented with [CuPy](https://cupy.dev/) or [PyTorch](https://pytorch.org/) for acceleration on GPUs. The similarity calculation is the slow step and this is calculation is greatly accelerated on GPU infrastructure (<1 sec for 1e10 elements on GPU vs. hours on CPU).
+This is a `numpy` implementation of: ["Gini Coefficient as a Unified Metric for Evaluating Many-versus-Many Similarity in Vector Spaces"](https://arxiv.org/abs/2411.07983). If using more than 1,000 embeddings/vectors, it is recommended that this code should be implemented with [CuPy](https://cupy.dev/) or [PyTorch](https://pytorch.org/) for acceleration on GPUs. The similarity calculation is the slow step and this is calculation is greatly accelerated on GPU infrastructure (<1 sec for 1e10 elements on GPU vs. hours on CPU).
 
 Dependencies include `numpy` and `scikit-learn`
 
