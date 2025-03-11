@@ -108,9 +108,7 @@ def calc_gini_by_row(embeddings: np.ndarray, normalize: bool=True) -> np.ndarray
         scaler = MinMaxScaler()
         scaler.fit(gini_array)
         gini_array = scaler.transform(gini_array)
-    # `.flatten()` step results in a transpose operation, which is 
-    # the same as the per-column gini coefficients
-    return gini_array.flatten()
+    return gini_array
 
 
 def calc_gini_all(embeddings: np.ndarray, normalize: bool) -> np.ndarray:
@@ -154,9 +152,7 @@ def calc_gini_all(embeddings: np.ndarray, normalize: bool) -> np.ndarray:
         scaler = MinMaxScaler()
         scaler.fit(gini_array)
         gini_array = scaler.transform(gini_array)
-    # `.flatten()` step results in a transpose operation, which is 
-    # the same as the per-column gini coefficients
-    return gini_array.flatten()
+    return gini_array
 
 
 def giniCoefficient(embeddings: np.ndarray, normalize: bool=True, memory_efficient: bool=True) -> np.ndarray:
